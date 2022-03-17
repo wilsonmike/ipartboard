@@ -22,7 +22,7 @@ const Header = () => {
         window.addEventListener("resize", handleResize);
 
         return () => window.removeEventListener("resize", handleResize);
-    })
+    }, [])
 
     useEffect(() => {
         if (size.width > 768 && menuOpen) {
@@ -39,7 +39,7 @@ const Header = () => {
         <div className={classes.header__content}>
             <h2 className={classes.header__content__logo}>navbar</h2>
        
-        <nav className={`${classes.header__content__nav} ${menuOpen ? classes.isMenu : "" }`}>
+        <nav className={`${classes.header__content__nav} ${menuOpen && size.width < 768 ? classes.isMenu : "" }`}>
             <ul>
                 <li>
                     <a href="/">PageOne</a>
