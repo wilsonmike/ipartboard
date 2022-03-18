@@ -1,9 +1,9 @@
 import React from 'react'
 
-const PageOne = () => {
+const Artwork = () => {
   return (
     <h1>PageOne</h1>
   )
 }
 
-export default PageOne
+export default Artwork
